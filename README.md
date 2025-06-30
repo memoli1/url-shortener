@@ -111,15 +111,15 @@ You can override `shorturl.length` per environment (e.g. 8 in production).
 
   Prevent abuse by limiting how often a client can submit URLs within a time window.
   
-- **Switch to a more persistent database**
+- **Switch to a persistent database**
   
-    The current setup uses an in-memory H2 database, which is ideal for development and testing. In production, a more persistent and scalable option like PostgreSQL or MySQL should be used.
+    The current setup uses an in-memory H2 database, which is ideal for development and testing. In production, a persistent and scalable option like PostgreSQL or MySQL should be used.
 
 - **Introduce caching to speed up URL resolution**
 
     Adding a caching layer (e.g., Redis) for resolving short URLs could reduce database load and improve performance, especially for frequently accessed URLs.
 
-- **Return full shortened URL (`https://DKB/abc123`) instead of just the short code**
+- **Return full shortened URL (`https://shortenerUrl/abc123`) instead of just the short code**
 
     This can be easily configured via application properties or environment variable in a real deployment with a known domain.
 
